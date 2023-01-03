@@ -61,7 +61,7 @@ function EnglishClasses() {
           <div className="w-1/2 pr-16">
             <div className="flex items-center">
               <a href="#" className="text-cyan-600 font-semibold">
-                Preply
+                Preply1
               </a>
               <span className="mx-1 text-lg text-gray-500"> / </span>
               <p className="text-gray-500"> Online English classes </p>
