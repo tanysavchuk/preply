@@ -16,8 +16,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 .bg-black-img {
-  background-image: url('./bg-black.svg');
+  /* background-image: url('./bg-black.svg'); */
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: 85%;
+  background-size: 100%;
 }

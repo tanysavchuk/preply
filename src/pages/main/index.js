@@ -20,7 +20,12 @@ import {
   faXmark
 } from '@fortawesome/free-solid-svg-icons';
 import Guide from '../../components/guide';
+import Coment from '../../components/coments';
+import Resource from '../../components/resources';
+import Button from '../../components/button';
 import { guides } from '../../mocks/guides';
+import { coments } from '../../mocks/coments';
+import { resources } from '../../mocks/resources';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -166,7 +171,7 @@ function Main() {
         <div className="flex justify-center">
           <div className="">
             <div className="bg-rose-50 flex justify-center ">
-              <div className="w-4/6 px-5">
+              <div className="w-[75%] px-5">
                 <div className="">
                   <div className="flex items-center py-5">
                     <a href="" className="text-cyan-500 ">
@@ -217,19 +222,19 @@ function Main() {
                     Here are how-to guides for every type of word you will find when you learn
                     English grammar. Check out the dedicated categories:
                   </p>
-                  <div className="flex justify-between">
-                    <div className="w-1/4">
-                      {guides.map((guide) => (
-                        <Guide key={guide.title} guide={guide} />
-                      ))}
-                    </div>
-                  </div>
                 </div>
+
+                <div className=" flex flex-wrap  ">
+                  {guides.map((guide) => (
+                    <Guide key={guide.title} guide={guide} />
+                  ))}
+                </div>
+
                 <h2 className="text-center text-3xl font-semibold text-gray-900 my-12">
                   How do you want to learn English online?
                 </h2>
                 <div className="flex  items-center justify-between ">
-                  <div className=" flex items-center bg-white rounded-3xl  px-5 py-10 mr-5 h-[245px]">
+                  <div className=" flex items-center bg-white rounded-3xl  px-5 py-10 mr-5 h-[245px] w-1/2">
                     <div>
                       <img src="https://static.preply.com/static/ssr/_next/static/images/group-lesson-214751898aee91e1cbb355a14ea70f84.png"></img>
                     </div>
@@ -241,14 +246,15 @@ function Main() {
                         {' '}
                         Practice and improve in structured classes with 4-5 other students
                       </p>
-                      <button className="bg-cyan-600 text-white text-lg py-3 px-5 rounded-xl mt-3">
-                        {' '}
-                        <FontAwesomeIcon icon={faUsers} className="text-white text-lg pr-2" />
-                        Join group classes
-                      </button>
+                      <Button
+                        icon={
+                          <FontAwesomeIcon icon={faUsers} className="text-white text-lg pr-2" />
+                        }
+                        title={'Join group classes'}
+                      />
                     </div>
                   </div>
-                  <div className=" flex items-center bg-white rounded-3xl   px-5 py-10 ml-5 h-[245px]">
+                  <div className=" flex items-center bg-white rounded-3xl   px-5 py-10 ml-5 h-[245px] w-1/2">
                     <div>
                       <img src="https://static.preply.com/static/ssr/_next/static/images/private-lesson-e2097b110d8f1d2cfc2c256d3ae7c455.png"></img>
                     </div>
@@ -260,11 +266,10 @@ function Main() {
                         Ready to speak English? Check out our tutors and start with a native English
                         speaker.
                       </p>
-                      <button className="bg-cyan-600 text-white text-lg py-3 px-5 rounded-xl mt-3">
-                        {' '}
-                        <FontAwesomeIcon icon={faUser} className="text-white text-sm pr-2" />
-                        Take 1-on-1 lessons
-                      </button>
+                      <Button
+                        icon={<FontAwesomeIcon icon={faUser} className="text-white text-sm pr-2" />}
+                        title={'Take 1-on-1 lessons'}
+                      />
                     </div>
                   </div>
                 </div>
@@ -281,142 +286,10 @@ function Main() {
                     More articles
                   </button>
                 </div>
-                <div className="flex justify-between">
-                  <div className="mr-7 w-1/3 ">
-                    <div className=" py-5  h-[500px] ">
-                      <a href="">
-                        <div className="">
-                          <img
-                            src="https://preply.com/wp-content/uploads/2022/03/zero-conditional-min-scaled.jpg"
-                            className="rounded-2xl w-full aspect-[1.77777778]"></img>
-                        </div>
-                        <div className="flex items-center justify-between my-5">
-                          <span className="bg-sky-200 text-gray-500 px-3 py-0.5 rounded-xl ">
-                            English
-                          </span>
-                          <div>
-                            <p className="text-gray-500">3/10/2022</p>
-                          </div>
-                        </div>
-                        <h3 className="text-xl  text-gray-600 font-semibold  my-5">
-                          Zero conditional in English: What it is and how to use it
-                        </h3>
-                        <p>
-                          Article by <span className="text-cyan-600"> Niccolette Filson</span>
-                        </p>
-                      </a>
-                    </div>
-                    <div className="py-5  h-[500px]">
-                      <a href="">
-                        <div className="">
-                          <img
-                            src="https://preply.com/wp-content/uploads/2021/02/pexels-maksim-goncharenok-4412924-e1612794627909.jpg"
-                            className="rounded-2xl w-full aspect-[1.77777778]"></img>
-                        </div>
-                        <div className="flex items-center justify-between my-5">
-                          <span className="bg-sky-200 text-gray-500 px-3 py-0.5 rounded-xl ">
-                            Adjectives
-                          </span>
-                          <div>
-                            <p className="text-gray-500">2/8/2022</p>
-                          </div>
-                        </div>
-                        <h3 className="text-xl  text-gray-600 font-semibold  my-5">
-                          Comparative and superlative adjectives: how they’re different & examples
-                        </h3>
-                        <p>
-                          Article by <span className="text-cyan-600"> Neha D.</span>
-                        </p>
-                      </a>
-                    </div>
-                  </div>
-                  <div className="mr-7 w-1/3">
-                    <div className="py-5  h-[500px]">
-                      <a href="">
-                        <div className=" ">
-                          <img
-                            src="https://preply.com/wp-content/uploads/2021/03/Screen-Shot-2021-03-22-at-17.07.59.png"
-                            className="rounded-2xl  w-full  aspect-[1.77777778]"></img>
-                        </div>
-                        <div className="flex items-center justify-between my-5">
-                          <span className="bg-sky-200 text-gray-500 px-3 py-0.5 rounded-xl ">
-                            English
-                          </span>
-                          <div>
-                            <p className="text-gray-500">3/22/2021</p>
-                          </div>
-                        </div>
-                        <h3 className="text-xl  text-gray-600 font-semibold  my-5">
-                          Prepositions: a simple guide for how to use in, on & at
-                        </h3>
-                      </a>
-                    </div>
-                    <div className="py-5  h-[500px]">
-                      <a href="">
-                        <div>
-                          <img
-                            src="https://preply.com/wp-content/uploads/2020/10/pexels-thought-catalog-2228579.jpg"
-                            className="rounded-xl w-full aspect-[1.77777778]"></img>
-                        </div>
-                        <div className="flex items-center justify-between my-5">
-                          <span className="bg-sky-200 text-gray-500 px-3 py-0.5 rounded-xl ">
-                            English
-                          </span>
-                          <div>
-                            <p className="text-gray-500"> 10/29/2020</p>
-                          </div>
-                        </div>
-                        <h3 className="text-xl  text-gray-600 font-semibold  my-5">
-                          Guide to symbols in English: list + how to use them
-                        </h3>
-                      </a>
-                    </div>
-                  </div>
-                  <div className="w-1/3">
-                    <div className="py-5  h-[500px]">
-                      <a href="">
-                        <div>
-                          <img
-                            src="https://preply.com/wp-content/uploads/2022/05/person-reading-book.jpg"
-                            className="rounded-xl w-full aspect-[1.77777778]"></img>
-                        </div>
-                        <div className="flex items-center justify-between my-5">
-                          <span className="bg-sky-200 text-gray-500 px-3 py-0.5 rounded-xl ">
-                            English
-                          </span>
-                          <div>
-                            <p className="text-gray-500">2/24/2021</p>
-                          </div>
-                        </div>
-                        <h3 className="text-xl  text-gray-600 font-semibold  my-5">
-                          Present perfect continuous tense: how to form it & examples
-                        </h3>
-                      </a>
-                    </div>
-                    <div className="py-5  h-[500px]">
-                      <a href="">
-                        <div>
-                          <img
-                            src="https://preply.com/wp-content/uploads/2020/10/Present-Tense-in-English.png"
-                            className="rounded-xl w-full aspect-[1.77777778]"></img>
-                        </div>
-                        <div className="flex items-center justify-between my-5">
-                          <span className="bg-sky-200 text-gray-500 px-3 py-0.5 rounded-xl ">
-                            English
-                          </span>
-                          <div>
-                            <p className="text-gray-500">10/27/2020</p>
-                          </div>
-                        </div>
-                        <h3 className="text-xl  text-gray-600 font-semibold  my-5">
-                          Present tense in English: What it is, how to use it & examples
-                        </h3>
-                        <p>
-                          Article by <span className="text-cyan-600">Kalatharan K.</span>
-                        </p>
-                      </a>
-                    </div>
-                  </div>
+                <div className=" flex flex-wrap justify-between">
+                  {resources.map((resource) => (
+                    <Resource key={resource.img} resource={resource} />
+                  ))}
                 </div>
 
                 <div className="flex items-center justify-between my-12">
@@ -572,82 +445,22 @@ function Main() {
               </div>
             </div>
             <div className="bg-black-img w-full flex justify-center bg-rose-50 pb-52 ">
-              <div className="  w-2/3 ">
-                <div className="flex items-center mt-40 mb-16">
+              <div className="  w-[75%] ">
+                <div className="flex items-center mt-32 mb-16">
                   <div className="h-10 w-10 bg-white rounded-lg flex justify-center items-center">
                     <FontAwesomeIcon icon={faPenToSquare} className="text-black text-lg" />
                   </div>
                   <h3 className="text-white text-5xl font-semibold ml-10">What our users say</h3>
                 </div>
-                <div className="flex justify-between mx-3">
-                  <div className="w-1/5 border border-white rounded-2xl text-white p-7">
-                    <div className="flex itens-center mb-2">
-                      <p className="text-lg font-medium mr-3">Bernat</p>
-                      <p className="text-lg font-medium">4.9</p>
-                    </div>
-                    <p className="mb-2 text-sm">Aug 3, 2022</p>
-                    <p className="text-base">
-                      Alex is very friendly and professional. He adapts the classes based on the
-                      level, the topics of interest and on the type of class. In my case, we are
-                      doing 1 hour of speaking per week and after few classes I feel more fluent. I
-                      do recommend him! ;)
-                    </p>
-                  </div>
-                  <div className="w-1/5 border border-white rounded-2xl text-white mx-7 p-7">
-                    <div className="flex itens-center mb-2">
-                      <p className="text-lg font-medium mr-3">Jose Javier</p>
-                      <p className="text-lg font-medium">4.9</p>
-                    </div>
-                    <p className="mb-2 text-sm">Aug 3, 2022</p>
-                    <p className="text-base">
-                      Katie is an amazing teacher!! We contacted her to prepare us for a job
-                      interview and she gave us good materials to prepare it. She was so kind and
-                      even gave us a couple of lessons before the interview day. We are very
-                      grateful to her!
-                    </p>
-                  </div>
-                  <div className="w-1/5 border border-white rounded-2xl text-white p-7">
-                    <div className="flex itens-center mb-2">
-                      <p className="text-lg font-medium mr-3">Andrea</p>
-                      <p className="text-lg font-medium">4.9</p>
-                    </div>
-                    <p className="mb-2 text-sm">Aug 3, 2022</p>
-                    <p className="text-base">
-                      I highly recommend Sana because she is a very good teacher. Lessons are always
-                      interesting and tailored to my needs. She is friendly, patient and she makes
-                      me feel comfortable even if I make mistakes
-                    </p>
-                  </div>
-                  <div className="w-1/5 border border-white rounded-2xl text-white mx-7 p-7">
-                    <div className="flex itens-center mb-2">
-                      <p className="text-lg font-medium mr-3">Deborah</p>
-                      <p className="text-lg font-medium">4.9</p>
-                    </div>
-                    <p className="mb-2 text-sm">Aug 3, 2022</p>
-                    <p className="text-base">
-                      My son (14 years old) absolutely enjoys the lessons with David who is an
-                      amazing teacher - my son understands him well, David is very patient, focuses
-                      on the goals of the student, and talks about interesting subjects. We
-                      definitely recommend him!
-                    </p>
-                  </div>
-                  <div className="w-1/5 border border-white rounded-2xl text-white p-7">
-                    <div className="flex itens-center mb-2">
-                      <p className="text-lg font-medium mr-3">Daniel</p>
-                      <p className="text-lg font-medium">4.9</p>
-                    </div>
-                    <p className="mb-2 text-sm">Aug 3, 2022</p>
-                    <p className="text-base">
-                      Tina is an excellent teacher. She always suggests an interesting topic for our
-                      conversations and at the same time focuses on various useful grammar issues.
-                      Her lessons are for me thought-provoking and motivating.
-                    </p>
-                  </div>
+                <div className="flex flex-wrap justify-between ">
+                  {coments.map((coment, index) => (
+                    <Coment key={`${coment.name} ${index}`} coment={coment} />
+                  ))}
                 </div>
               </div>
             </div>
             <div className="bg-rose-50 flex justify-center">
-              <div className="w-4/6 ">
+              <div className="w-[75%] ">
                 <div className="flex items-center pt-16">
                   <div className="bg-black h-10 w-10 rounded-lg mr-5 flex justify-center items-center">
                     <FontAwesomeIcon icon={faBookmark} className="text-white text-lg" />
@@ -739,7 +552,7 @@ function Main() {
             </div>
 
             <div className="bg-gray-700 flex justify-center">
-              <div className="w-4/6  ">
+              <div className="w-[75%]  ">
                 <div className="flex mt-20 pb-20 border-b-2 border-gray-500">
                   <div className="text-white w-1/4 ">
                     <p className="pb-2">ABOUT US</p>
