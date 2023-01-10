@@ -4,7 +4,8 @@ import {
   faArrowRightToBracket,
   faCirclePlay,
   faAngleRight,
-  faAngleLeft
+  faAngleLeft,
+  faStar
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import LanguagesSelect from '../../components/languages-select';
@@ -18,6 +19,7 @@ import SortPrice from '../../components/sort-price';
 import CourseItem from '../../components/course-items';
 import CourseRequest from '../../components/course-request';
 import Review from '../../components/review';
+import AccordionQuestions from '../../components/accordion';
 import { courseItem } from '../../mocks/course-item';
 import { review } from '../../mocks/review';
 
@@ -137,6 +139,20 @@ function EnglishClasses() {
              border-gray-300 focus:border-cyan-600 rounded-full  text-gray-300 focus:text-cyan-600 ml-2">
               <FontAwesomeIcon icon={faAngleRight} className="text-2xl font-semibold " />
             </button>
+          </div>
+          <div className="flex item-center justify-center mt-16 mb-6">
+            <FontAwesomeIcon icon={faStar} className="text-2xl text-yellow-600" />
+            <FontAwesomeIcon icon={faStar} className=" mx-1 text-2xl text-yellow-600" />
+            <FontAwesomeIcon icon={faStar} className="text-2xl text-yellow-600" />
+            <FontAwesomeIcon icon={faStar} className=" mx-1 text-2xl text-yellow-600" />
+            <FontAwesomeIcon icon={faStar} className="text-2xl text-yellow-600" />
+          </div>
+          <p className="text-center text-lg text-gray-600">Rated excellent by Preply learners!</p>
+          <div className="m-auto w-10/12 mt-28">
+            <p className="text-center font-semibold text-4xl mb-12">Frequently asked questions</p>
+            <div className="p-7 border border-gray-300 rounded-3xl">
+              <AccordionQuestions />
+            </div>
           </div>
         </div>
       </div>

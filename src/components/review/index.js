@@ -15,11 +15,10 @@ const Review = (props) => {
   );
 };
 Review.propTypes = {
-  review: {
-    comment: PropTypes.string,
-    avatar: PropTypes.string,
-    name: PropTypes.string
-  }
+  review: PropTypes.object,
+  comment: PropTypes.string,
+  avatar: PropTypes.string,
+  name: PropTypes.string
 };
 
 export default Review;
